@@ -11,14 +11,13 @@ def count_characters(file_contents):
             characters_dict[character] =1
         else:
             characters_dict[character] +=1
-        print(characters_dict)
     return characters_dict
 
 def create_report(characters_dict):
     characters_list = []
     for ch in characters_dict:
         characters_list.append({"char": ch, "num": characters_dict[ch]})
-    characters_dict.sort(reverse=True, key=sort_on)
+    characters_list.sort(reverse=True, key=sort_on)
     return characters_list
 
 def sort_on(item):
